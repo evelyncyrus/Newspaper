@@ -1,0 +1,46 @@
+@import 'mixin';
+.list {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid $bColor;
+    .list-hd {
+        @include head($pad: 0);
+        cursor: pointer;
+    }
+    .list-tag {
+        @include radius(.1rem);
+        @include head($pad: 0, $height: inherit, $color: $white, $size: .6rem);
+        background: $themeNormal;
+        width: 4rem;
+    }
+    .list-bd {
+        overflow: hidden;
+        font-size: .8rem;
+        color: $darkerGrey;
+    }
+    .bd-lf {
+        float: left;
+    }
+    .bd-rt {
+        float: right;
+        span {
+            cursor: pointer;
+            vertical-align: middle;
+            display: inline-block;
+            margin-right: .5rem;
+            &:before {
+                position: relative;
+                font-size: 1rem;
+            }
+        }
+        .icon-star {
+            vertical-align: 1;
+            margin-right: .3rem;
+            &:before {
+                left: -2px;
+                top: 0;
+                font-size: 1.2rem;
+            }
+        }
+    }
+}

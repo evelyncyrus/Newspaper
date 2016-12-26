@@ -1,0 +1,21 @@
+// color
+$themeColor: #3399FF;
+$fontColor: #222;
+$white: #fff;
+$black: #000;
+$bColor: #ddd;
+$lightGrey: darken($white, 20%);
+$darkerNormal: lighten($black, 60%);
+$darkerGrey: lighten($black, 50%);
+$warmColor: #ffbf66;
+$warmNormal: darken($warmColor, 15%);
+$warmDarker: darken($warmColor, 25%);
+$sucColor: #6ed46e;
+$sucNormal: darken($sucColor, 20%);
+$sucDarker: darken($sucColor, 30%);
+$dangerColor: #df7167;
+$dangerNormal: darken($dangerColor, 10%);
+$dangerDarker: darken($dangerColor, 25%);
+$themeLight: lighten($themeColor, 10%);
+$themeNormal: darken($themeColor, 10%);
+$themeDarker: darken($themeColor, 20%);

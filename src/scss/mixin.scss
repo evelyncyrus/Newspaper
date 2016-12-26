@@ -1,0 +1,52 @@
+@import 'base';
+@mixin btnDefault($showWay: inline-block, $color1: $white, $color2: transparent, $bgColor: $lightGrey, $line: 2.5rem, $radius: .3rem, $pad: 0 1rem) {
+    display: $showWay;
+    font-size: 1rem;
+    color: $color1;
+    border: 1px solid $color2;
+    background-color: $bgColor;
+    line-height: $line;
+    border-radius: $radius;
+    outline: none;
+    padding: $pad;
+}
+
+@mixin iptCss($height: 1.5rem, $wid: 100%, $bColor:$bColor, $pad: 0 1rem) {
+    line-height: $height;
+    width: $wid;
+    padding: $pad;
+    box-sizing: border-box;
+    border: 1px solid $bColor;
+}
+
+@mixin pos($type:absolute, $top:50%, $left:50%, $margin:0 auto, $transform:translate(-50%, -50%)) {
+    position: $type;
+    top: $top;
+    left: $left;
+    transform: $transform;
+    margin: $margin;
+}
+
+@mixin btnRadius($color:$white, $float:right, $wide:1rem, $height:.8rem, $margin:.5rem 0, $radius:50%, $bg:$lightGrey) {
+    color: $white;
+    float: $float;
+    height: $wide;
+    line-height: $height;
+    width: $wide;
+    margin: $margin;
+    border-radius: $radius;
+    cursor: pointer;
+    background: $bg;
+}
+
+@mixin radius($radius:.3rem) {
+    border-radius: $radius;
+    overflow: hidden;
+}
+
+@mixin head($height:3rem, $pad: 0 1rem, $color: $fontColor, $size: 1rem) {
+    line-height: $height;
+    padding: $pad;
+    color: $color;
+    font-size: $size;
+}

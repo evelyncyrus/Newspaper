@@ -1,0 +1,68 @@
+@import 'mixin';
+
+/*btn*/
+
+.btn-default {
+    @include btnDefault($bgColor: $darkerNormal);
+}
+
+.btn-default.disable {
+    @include btnDefault;
+}
+
+.btn-default:not(.disable):active,
+.btn-default:not(.disable):hover {
+    @include btnDefault($bgColor: $darkerGrey);
+}
+
+.btn-theme {
+    @include btnDefault($bgColor: $themeNormal);
+}
+
+.btn-theme.disable {
+    @include btnDefault($bgColor: $themeLight);
+}
+
+.btn-theme:not(.disable):active,
+.btn-theme:not(.disable):hover {
+    @include btnDefault($bgColor: $themeDarker);
+}
+
+.btn-warm {
+    @include btnDefault($bgColor: $warmNormal);
+}
+
+.btn-warm.disable {
+    @include btnDefault($bgColor: $warmColor);
+}
+
+.btn-warm:not(.disable):active,
+.btn-warm:not(.disable):hover {
+    @include btnDefault($bgColor: $warmDarker);
+}
+
+.btn-success {
+    @include btnDefault($bgColor: $sucNormal);
+}
+
+.btn-success.disable {
+    @include btnDefault($bgColor: $sucColor);
+}
+
+.btn-success:not(.disable):active,
+.btn-success:not(.disable):hover {
+    @include btnDefault($bgColor: $sucDarker);
+}
+
+.btn-danger {
+    @include btnDefault($bgColor: $dangerNormal);
+}
+
+.btn-danger.disable {
+    @include btnDefault($bgColor: $dangerColor);
+}
+
+.btn-danger:not(.disable):active,
+.btn-danger:not(.disable):hover {
+    @include btnDefault($bgColor: $dangerDarker);
+}

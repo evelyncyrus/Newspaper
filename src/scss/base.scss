@@ -1,0 +1,52 @@
+html,
+body {
+    font-size: 14px;
+    min-height: 100vh;
+}
+
+html,
+body,
+ul,
+p {
+    padding: 0;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
+    font-size: 14px;
+    font-family: 'Microsoft Yahei'
+}
+
+html,
+body,
+input,
+button,
+textarea,
+img,
+span,
+p,
+a {
+    font-family: 'Microsoft Yahei'
+}
+
+@import 'config';
+@import 'icon';
+a {
+    color: $themeColor;
+    text-decoration: none;
+}
+
+
+/*kit*/
+
+[class^="kit-"] {
+    margin-top: 1rem;
+}
