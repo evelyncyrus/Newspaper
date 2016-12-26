@@ -64,7 +64,7 @@
       @include pos($type:fixed,$transform:none,$top:0,$left:0);
       width: 100%;
       height: 100%;
-      z-index:0;
+      z-index:1;
       background: rgba($black,.75);
     }
     .pop-hd{
@@ -83,7 +83,7 @@
       right: -1rem;
     }
     .pop-panel{
-      z-index: 1;
+      z-index: 2;
       padding: 2rem;
       border-radius: .3rem;
       @include pos;

@@ -3,6 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>Vue example</title>
     <style>
         .kit-title {
@@ -30,6 +33,25 @@
     <h3 class="kit-title">列表组件</h3>
     <list></list>
     <script src="./dist/build.js"></script>
+
+    <script>
+        (function resetRem() {
+
+            //设置根元素字体大小
+            var setRem = function() {
+                var root = document.documentElement;
+                var fontS = Math.min(750, window.innerWidth) / 48 + 'px';
+                root.style.fontSize = fontS;
+            };
+            window.addEventListener('resize', setRem);
+
+            //解决Safari存在的加载时resize事件不触发问题
+            var userAgent = navigator.userAgent;
+            if (userAgent.indexOf("Safari") > -1) {
+                setRem();
+            }
+        })();
+    </script>
 </body>
 
 </html>
