@@ -1,41 +1,48 @@
 @import 'mixin';
 .kit-panel {
-    display: flex;
+    overflow: hidden;
+    padding: 0 1px 3px;
     >h3 {
         display: block
     }
+    .panel {
+        float: left;
+        width: 19.2%;
+        height: 220px;
+        margin-right: 1%;
+        margin-bottom: 1%;
+        @include radius;
+        box-shadow: 0 0 .1px $darkerGrey;
+        h3 {
+            @include head($color: $white);
+        }
+        .panel-bd {
+            padding: 1rem;
+        }
+        .link-more {
+            display: block;
+            margin-top: .5rem;
+            text-align: right;
+            cursor: pointer;
+        }
+        .hd-success {
+            background: $sucColor;
+        }
+        .hd-warm {
+            background: $warmColor;
+        }
+        .hd-default {
+            background: $lightGrey;
+        }
+        .hd-danger {
+            background: $dangerColor;
+        }
+        .hd-theme {
+            background: $themeColor;
+        }
+        &:nth-child(5n){
+            margin: 0;
+        }
+    }
 }
 
-.panel {
-    flex: 1;
-    margin-right: 1rem;
-    @include radius;
-    box-shadow: 0 0 .1px $darkerGrey;
-    h3 {
-        @include head($color: $white);
-    }
-    .panel-bd {
-        padding: 1rem;
-    }
-    .link-more {
-        display: block;
-        margin-top: .5rem;
-        text-align: right;
-        cursor: pointer;
-    }
-    .hd-success {
-        background: $sucColor;
-    }
-    .hd-warm {
-        background: $warmColor;
-    }
-    .hd-default {
-        background: $lightGrey;
-    }
-    .hd-danger {
-        background: $dangerColor;
-    }
-    .hd-theme {
-        background: $themeColor;
-    }
-}

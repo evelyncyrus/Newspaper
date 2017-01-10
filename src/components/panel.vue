@@ -21,7 +21,7 @@
           {class:'hd-danger',title:'危险颜色面板',article:'西哦系哦系哦系哦系哦哈',link:'/detail?actId=2'},
           {class:'hd-warm',title:'警告颜色面板',article:'呵呵呵呵呵呵',link:'/detail?actId=3'},
           {class:'hd-default',title:'默认颜色面板',article:'哈嘻嘻嘻嘻嘻嘻嘻嘻',link:'/detail?actId=4'},
-          {class:'hd-theme',title:'主题颜色面板',article:'哈哈哈哈哈恍恍惚惚哈哈哈哈哈恍恍惚惚哈哈哈哈哈恍恍惚惚哈哈哈哈哈恍恍惚惚',link:'/detail?actId=5'}
+          {class:'hd-theme',title:'主题颜色面板',article:'哈哈哈哈哈恍恍惚惚哈哈哈哈哈恍恍惚惚哈哈哈哈哈恍恍惚惚哈哈哈哈哈恍恍惚惚',link:'/detail?actId=5'},
         ]
       }
     }
