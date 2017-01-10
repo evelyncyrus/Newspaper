@@ -23,8 +23,8 @@
       <input type="text" placeholder="搜索感兴趣的内容" @input="selVal">
       <button class="btn-theme" >搜索</button>
       <span class="tab" id="tab">
-        <router-link to="/panel" @click.prevent="activeState" active-class="active">面板</router-link>
-        <router-link to="/list" @click.prevent="activeState" active-class="active">列表</router-link>
+        <router-link to="/panel" active-class="active">面板</router-link>
+        <router-link to="/list" active-class="active">列表</router-link>
       </span>
     </section>
     <router-view></router-view>
@@ -60,10 +60,6 @@
       this.isActive =  window.location.hash.indexOf('list')>0 ? false: true;
     },
     methods: {
-      activeState: function(e){
-        alert(1)
-        this.isActive = true;
-      },
       selVal: function(e){
         var item = e.target;
         var val = item.value;
