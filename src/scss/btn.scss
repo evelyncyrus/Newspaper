@@ -7,12 +7,12 @@
 }
 
 .btn-default.disable {
-    @include btnDefault;
+    @include btnHover();
 }
 
 .btn-default:not(.disable):active,
 .btn-default:not(.disable):hover {
-    @include btnDefault($bgColor: $darkerGrey);
+    @include btnHover($color2: $darkerGrey, $bgColor: $darkerGrey);
 }
 
 .btn-theme {
@@ -20,12 +20,12 @@
 }
 
 .btn-theme.disable {
-    @include btnDefault($bgColor: $themeLight);
+    @include btnHover($color2: $themeLight, $bgColor: $themeLight);
 }
 
 .btn-theme:not(.disable):active,
 .btn-theme:not(.disable):hover {
-    @include btnDefault($bgColor: $themeDarker);
+    @include btnHover($color2: $themeDarker, $bgColor: $themeDarker);
 }
 
 .btn-warm {
@@ -33,12 +33,12 @@
 }
 
 .btn-warm.disable {
-    @include btnDefault($bgColor: $warmColor);
+    @include btnHover($color2: $warmColor, $bgColor: $warmColor);
 }
 
 .btn-warm:not(.disable):active,
 .btn-warm:not(.disable):hover {
-    @include btnDefault($bgColor: $warmDarker);
+    @include btnHover($color2: $warmDarker, $bgColor: $warmDarker);
 }
 
 .btn-success {
@@ -46,12 +46,12 @@
 }
 
 .btn-success.disable {
-    @include btnDefault($bgColor: $sucColor);
+    @include btnHover($color2: $sucColor, $bgColor: $sucColor);
 }
 
 .btn-success:not(.disable):active,
 .btn-success:not(.disable):hover {
-    @include btnDefault($bgColor: $sucDarker);
+    @include btnHover($color2: $sucDarker, $bgColor: $sucDarker);
 }
 
 .btn-danger {
@@ -59,10 +59,10 @@
 }
 
 .btn-danger.disable {
-    @include btnDefault($bgColor: $dangerColor);
+    @include btnHover($color2: $dangerColor, $bgColor: $dangerColor);
 }
 
 .btn-danger:not(.disable):active,
 .btn-danger:not(.disable):hover {
-    @include btnDefault($bgColor: $dangerDarker);
+    @include btnHover($color2: $dangerDarker, $bgColor: $dangerDarker);
 }

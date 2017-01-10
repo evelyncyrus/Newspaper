@@ -1,31 +1,37 @@
 import Vue from 'vue/dist/vue.js'
-import Tab from './components/tab.vue'
-import Pop from './components/popup.vue'
-import Btn from './components/btn.vue'
+import Home from './components/home/home.vue'
+import Page from './components/page.vue'
 import Panel from './components/panel.vue'
 import List from './components/list.vue'
+import VueRouter from 'vue-router/dist/vue-router.js'
 
-var app1 = new Vue({
-    el: 'tab',
-    components: { Tab }
+Vue.use(VueRouter);
+
+const router = new VueRouter({
+    routes: [{
+            path: '/panel',
+            component: Panel,
+        },
+        {
+            path: '/list',
+            component: List,
+        },
+        {
+            path: '/',
+            component: Panel
+        }
+    ]
+})
+
+const app = new Vue({
+    el: 'home',
+    components: { Home },
+    router
+}).$mount('#tab');
+
+
+const router2 = new VueRouter({
+    routes: [
+        { path: '/detail/:actId', component: Home }
+    ]
 });
-
-var app2 = new Vue({
-    el: 'pop',
-    components: { Pop }
-})
-
-var app3 = new Vue({
-    el: 'btn',
-    components: { Btn }
-})
-
-var app4 = new Vue({
-    el: 'panel',
-    components: { Panel }
-})
-
-var app5 = new Vue({
-    el: 'list',
-    components: { List }
-})

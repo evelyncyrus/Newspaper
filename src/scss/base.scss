@@ -30,6 +30,7 @@ body,
 input,
 button,
 textarea,
+select,
 img,
 span,
 p,
@@ -38,7 +39,7 @@ a {
 }
 
 @import 'config';
-@import 'icon';
+// @import 'icon';
 a {
     color: $themeColor;
     text-decoration: none;

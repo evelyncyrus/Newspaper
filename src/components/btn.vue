@@ -1,6 +1,6 @@
 <template>
   <div class="kit-btn" id="btn">
-    <button v-for="(item, index) in btns" :class="item.classObj" @click="btnClick(index)">{{item.name}}</button>
+    <a :href="item.href" v-for="(item, index) in btns" :class="item.classObj" @click="btnClick(index)">{{item.name}}</a>
   </div>
 </template>
 
@@ -12,29 +12,33 @@
           {classObj:{
             'btn-success':true,
             'disable': false
-          }
-          ,name:'成功按钮'},
+          },
+          href:'javascript:void(0);',
+          name:'JAVASCRIPT'},
           {classObj:{
             'btn-warm':true,
             'disable': false
           },
-          name:'提示按钮'},
+          href:'javascript:void(0);',
+          name:'PYTHON'},
           {classObj:{
             'btn-default':true,
             'disable': false
           },
-          name:'默认按钮'},
+          href:'javascript:void(0);',
+          name:'Node'},
           {classObj:{
             'btn-theme':true,
             'disable': false
           },
-          name:'主题按钮'},
-          {classObj:
-          {
+          href:'javascript:void(0);',
+          name:'Angular Js'},
+          {classObj:{
             'btn-danger':true,
             'disable': false
           },
-          name:'警告按钮'}
+          href:'javascript:void(0);',
+          name:'Vue js'}
         ]
       }
     },
@@ -53,7 +57,9 @@
 
 <style scoped lang="sass">
   @import '../scss/btn.scss';
-  button[class^="btn-"]{
+  a[class^="btn-"]{
+    cursor: pointer;
+    line-height: 1.8rem;
     margin: 0 1rem 1rem 0;
   }
 </style>

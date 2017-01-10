@@ -36,7 +36,7 @@
   @import '../scss/mixin.scss';
   .tab {
     overflow: hidden;
-    display: inline-block;
+    // display: inline-block;
     width: 50%;
     background: $lightGrey;
     @include radius;

@@ -11,6 +11,12 @@
     padding: $pad;
 }
 
+@mixin btnHover($color1:$white, $color2:$lightGrey, $bgColor:$lightGrey) {
+    color: $color1;
+    border: 1px solid $color2;
+    background-color: $bgColor;
+}
+
 @mixin iptCss($height: 1.5rem, $wid: 100%, $bColor:$bColor, $pad: 0 1rem) {
     line-height: $height;
     width: $wid;
@@ -49,4 +55,21 @@
     padding: $pad;
     color: $color;
     font-size: $size;
+}
+
+@mixin triangle($top:0, $left:0, $pos:top, $color:$bColor, $wid: 5px) {
+    position: absolute;
+    top: $top;
+    left: $left;
+    border: $wid solid transparent;
+    border-#{$pos}-color: $color;
+}
+
+@mixin rectangle($top:0, $left:0, $wid: 40px, $color:$bColor) {
+    position: absolute;
+    top: $top;
+    left: $left;
+    width: $wid;
+    height: $wid;
+    border: 1px solid $color;
 }
