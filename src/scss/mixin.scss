@@ -50,7 +50,7 @@
     overflow: hidden;
 }
 
-@mixin head($height:3rem, $pad: 0 1rem, $color: $fontColor, $size: 1rem) {
+@mixin head($height:2.5, $pad: 0 1rem, $color: $fontColor, $size: 1rem) {
     line-height: $height;
     padding: $pad;
     color: $color;

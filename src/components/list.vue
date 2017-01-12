@@ -1,5 +1,5 @@
 <template>
-  <section class="kit-list" id="list">
+  <section id="list">
     <div class="list" v-for="item in lists">
       <a class="list-hd">
         <span class="list-tag">{{item.tag}}</span>

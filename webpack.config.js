@@ -44,11 +44,11 @@ module.exports = {
                 loader: 'file-loader?name=./fonts/[name].[ext]'
             },
             //解析.scss
-            // {
-            //     test:/\.scss$/,
-            //     loaders:['style','css','sass'],
-            //     include:APP_PATH
-            // }
+            {
+                test: /\.scss$/,
+                loaders: ['style', 'css', 'sass']
+                // include:APP_PATH
+            },
             //图片转化，小于8K自动转化为base64的编码
             {
                 test: /\.(png|jpg|gif)$/,

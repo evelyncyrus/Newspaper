@@ -1,0 +1,57 @@
+@import 'mixin';
+.detail{
+  background: lighten($lightGrey, 17%);
+  padding-bottom: 5rem;
+  ul{list-style: none;}
+  .art-title{
+    margin: 0 3rem;
+    padding: 1rem 0 .5rem;
+    font-size: 2rem;
+    line-height: 2;
+    color: $fontColor;
+    border-bottom: 1px solid $bColor;
+  }
+  .art-info{
+    color: $darkerGrey;
+    padding: 0 3rem;
+    line-height: 3;
+    font-size: .8rem;
+    span{padding-right: .3rem}
+  }
+  .contain{
+    padding: 1.5rem 3rem;
+    display: flex;
+    >div{
+      -webkit-box-flex:1;
+      -ms-flex:1;
+      flex:1;
+      background: $white;
+      padding: 1.5rem;
+    }
+    .links{
+      margin-left: 1rem;
+      max-width: 260px;
+      padding: .5rem 1.5rem 0;
+      .relative{
+        line-height: 2.5;
+        font-size: 1rem;
+        border-bottom: 1px solid $bColor;
+      }
+      .arts{
+        padding: .8rem 0;
+      }
+      .art{
+        margin-bottom: .2rem;
+        line-height: 2;
+        font-size: .8rem;
+        text-decoration: underline;
+        a{
+          display: block;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}

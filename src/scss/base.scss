@@ -34,20 +34,13 @@ select,
 img,
 span,
 p,
-a {
+a,
+div{
     font-family: 'Microsoft Yahei'
 }
 
 @import 'config';
-// @import 'icon';
 a {
     color: $themeColor;
     text-decoration: none;
-}
-
-
-/*kit*/
-
-[class^="kit-"] {
-    margin-top: 1rem;
 }

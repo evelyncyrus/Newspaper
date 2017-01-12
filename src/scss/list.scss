@@ -1,7 +1,8 @@
 @import 'mixin';
+@import 'icon';
 .list {
     margin-bottom: 1rem;
-    padding-bottom: 1rem;
+    padding-bottom: .5rem;
     border-bottom: 1px solid $bColor;
     .list-hd {
         @include head($pad: 0);

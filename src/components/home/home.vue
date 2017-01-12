@@ -112,6 +112,7 @@
     }
     .input{
       position:relative;
+      margin-bottom: 1rem;
       &:after{
         content:'';
         @include rectangle($wid: 38px,$left:100px);
