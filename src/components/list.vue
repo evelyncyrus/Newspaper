@@ -1,10 +1,10 @@
 <template>
   <section id="list">
     <div class="list" v-for="item in lists">
-      <a class="list-hd">
+      <router-link :to="{name:'detail',params: {userId:item.id}}" class="list-hd">
         <span class="list-tag">{{item.tag}}</span>
         {{item.title}}
-      </a>
+      </router-link>
       <div class="list-bd">
         <span class="bd-lf">{{item.author}}</span>
         <span class="bd-rt">
@@ -22,10 +22,10 @@
     data(){
       return{
         lists:[
-          {tag:'精品',title:'集合类操作优化经验总结',author:'作者'},
-          {tag:'',title:'集合类操作优化经验总结',author:'作者'},
-          {tag:'', title:'集合类操作优化经验总结',author:'作者'},
-          {tag:'',title:'集合类操作优化经验总结',author:'作者'}
+          {tag:'精品',title:'集合类操作优化经验总结',author:'作者',id:'1'},
+          {tag:'',title:'集合类操作优化经验总结',author:'作者',id:'2'},
+          {tag:'', title:'集合类操作优化经验总结',author:'作者',id:'3'},
+          {tag:'',title:'集合类操作优化经验总结',author:'作者',id:'4'}
         ],
         star: true
       }

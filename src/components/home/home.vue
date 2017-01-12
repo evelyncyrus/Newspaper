@@ -48,10 +48,6 @@
           {value:'3',name:'消息来源3'},
           {value:'4',name:'消息来源4'},
         ],
-        link:[
-          {path:'/panel',objClass:'active',text:'面板'},
-          {path:'/list',objClass:'',text:'列表'}
-        ],
         isActive: true
       }
     },
