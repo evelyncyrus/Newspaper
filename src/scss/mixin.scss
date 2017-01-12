@@ -57,18 +57,18 @@
     font-size: $size;
 }
 
-@mixin triangle($top:0, $left:0, $pos:top, $color:$bColor, $wid: 5px) {
+@mixin triangle($top:0, $right:0, $pos:top, $color:$bColor, $wid: 5px) {
     position: absolute;
     top: $top;
-    left: $left;
+    right: $right;
     border: $wid solid transparent;
     border-#{$pos}-color: $color;
 }
 
-@mixin rectangle($top:0, $left:0, $wid: 40px, $color:$bColor) {
+@mixin rectangle($top:0, $right:0, $wid: 40px, $color:$bColor) {
     position: absolute;
     top: $top;
-    left: $left;
+    right: $right;
     width: $wid;
     height: $wid;
     border: 1px solid $color;

@@ -17,9 +17,11 @@
       </div>
     </header>
     <section class="input">
-      <select name="" id="">
-        <option v-for="(item,index) in options" :value="item.value">{{item.name}}</option>
-      </select>
+      <div class="outer">
+        <select name="" id="">
+          <option v-for="(item,index) in options" :value="item.value">{{item.name}}</option>
+        </select>
+      </div>
       <input type="text" placeholder="搜索感兴趣的内容" @input="selVal">
       <button class="btn-theme" >搜索</button>
       <span class="tab" id="tab">
@@ -44,7 +46,7 @@
         title: '热点话题',
         options:[
           {value:'1',name:'消息来源1'},
-          {value:'2',name:'消息来源2'},
+          {value:'2',name:'消息消息来源息来源2'},
           {value:'3',name:'消息来源3'},
           {value:'4',name:'消息来源4'},
         ],
@@ -108,15 +110,19 @@
       }
     }
     .input{
-      position:relative;
       margin-bottom: 1rem;
-      &:after{
-        content:'';
-        @include rectangle($wid: 38px,$left:100px);
-      }
-      &:before{
-        content:'';
-        @include triangle($wid: 10px, $left: 110px,$top: 15px);
+      .outer{
+        position:relative;
+        margin-right: .5rem;
+        display: inline-block;
+        &:after{
+          content:'';
+          @include rectangle($wid: 38px);
+        }
+        &:before{
+          content:'';
+          @include triangle($wid: 10px, $right: 10px, $top: 15px);
+        }
       }
       select,input{
         color: $fontColor;
@@ -129,13 +135,16 @@
         outline: none;
       }
       select{
-        width: 140px;
+        width: auto;
+        max-width: 677px;
         position: relative;
         z-index: 1;
+        padding-right: 3rem;
         background: transparent;
       }
       input[type="text"]{
         height: 38px;
+        margin-right: .5rem;
       }
       button[class^="btn-"]{
         line-height: 2;
