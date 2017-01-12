@@ -47,7 +47,6 @@
 
 <style scoped lang="sass">
   @import '../../scss/detail.scss';
-  
 </style>
 
 

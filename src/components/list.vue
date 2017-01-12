@@ -8,7 +8,7 @@
       <div class="list-bd">
         <span class="bd-lf">{{item.author}}</span>
         <span class="bd-rt">
-          <span class="icon-star" @click=""></span>
+          <span v-if="star" class="icon-star" @click=""></span>
           <span class="icon-bad" @click=""></span>
           <span class="icon-good" @click=""></span>
         </span>
@@ -26,7 +26,8 @@
           {tag:'',title:'集合类操作优化经验总结',author:'作者'},
           {tag:'', title:'集合类操作优化经验总结',author:'作者'},
           {tag:'',title:'集合类操作优化经验总结',author:'作者'}
-        ]
+        ],
+        star: true
       }
     }
   }
