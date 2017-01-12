@@ -105,6 +105,7 @@
       background: lighten($lightGrey, 15%);
       padding: 0 1rem;
       h3{
+        margin-bottom: 1rem;
         font-size: 1.2rem;
         line-height: 3;
         border-bottom: 1px solid $bColor;

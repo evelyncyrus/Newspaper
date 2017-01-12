@@ -35,7 +35,7 @@
         origin:'Go中国',
         main: '全量数据，搜索结果不理想；全量数据，搜索结果不理想；全量数据，搜索结果不理想；',
         arts:[
-          {link:'https://www.baidu.com',title: '哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈'},
+          {link:'https://www.baidu.com',title: 'Python的GIL是什么鬼，多线程性能究竟如何'},
           {link:'https://www.baidu.com',title: '哈哈哈哈哈'},
           {link:'https://www.baidu.com',title: '哈哈哈哈哈'},
           {link:'https://www.baidu.com',title: '哈哈哈哈哈'}

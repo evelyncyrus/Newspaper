@@ -1,5 +1,5 @@
 <template>
-  <div class="kit-btn" id="btn">
+  <div id="btn">
     <a :href="item.href" v-for="(item, index) in btns" :class="item.classObj" @click="btnClick(index)">{{item.name}}</a>
   </div>
 </template>
