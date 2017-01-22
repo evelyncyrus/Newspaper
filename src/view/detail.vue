@@ -23,7 +23,7 @@
 
 
 <script>
-  import Remark from './remark';
+  import Remark from '../components/remark';
   export default{
     components: {Remark},
     data(){
@@ -46,7 +46,7 @@
 </script>
 
 <style scoped lang="sass">
-  @import '../../scss/detail.scss';
+  @import '../scss/detail.scss';
 </style>
 
 

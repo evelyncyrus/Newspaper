@@ -1,19 +1,13 @@
 <template>
-  <div class="message">{{msg}}</div>
+  <div id="app">
+
+  </div>
 </template>
+
 <script>
+  import store from './vuex/store' // import 刚创建的 store
+
   export default{
-    data(){
-      return{
-        msg: 'Hello vue!'
-      }
-    }
+    store: store
   }
 </script>
-<style>
-  .message{
-    color:blue;
-    font-size: 18px;
-    font-weight: bold;
-  }
-</style>

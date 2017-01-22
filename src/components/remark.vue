@@ -7,7 +7,7 @@
       <span class="hint" v-if="signed">游客身份？<a href="sign">点此登录</a></span>
       <span class="hint" v-else>您的想法</span>
       <p class="word">
-        <textarea v-if="empty" name="remarkArea" id="" rows="10">请您输入合法言论...</textarea>
+        <textarea v-if="empty" name="remarkArea" id="" rows="10" >请您输入合法言论...</textarea>
         <textarea v-else name="remarkArea" id="" rows="10">{{words}}</textarea>
         <button class="btn-theme">提交</button>
       </p>
@@ -17,8 +17,8 @@
 
 
 <script>  
-  import Page from '../page';
-  import List from '../list';
+  import Page from './page';
+  import List from './list';
   export default{
     components: {Page,List},
     data(){
@@ -38,8 +38,8 @@
 </script>
 
 <style scoped lang="sass">
-  @import '../../scss/mixin.scss';
-  @import '../../scss/btn.scss';
+  @import '../scss/mixin.scss';
+  @import '../scss/btn.scss';
   .remark{
     margin: 0 3rem;
     padding: 1rem 1.5rem 3rem;

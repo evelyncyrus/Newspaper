@@ -3,8 +3,8 @@
     <nav>
       <img class="log" :src="logSrc" alt="Logo">
       <span class="btns">
-          <button class="btn-theme">{{btn1}}</button>
-          <button class="btn-default">{{btn2}}</button>
+        <button class="btn-theme" @click="showPop($event)">注册</button>
+        <button class="btn-default" @click="showPop($event)">登录</button>
       </span>
     </nav>
     <header>
@@ -22,7 +22,7 @@
           <option v-for="(item,index) in options" :value="item.value">{{item.name}}</option>
         </select>
       </div>
-      <input type="text" placeholder="搜索感兴趣的内容" @input="selVal">
+      <input type="text" placeholder="搜索感兴趣的内容">
       <button class="btn-theme" >搜索</button>
       <span class="tab" id="tab">
         <router-link to="/panel" active-class="active">面板</router-link>
@@ -30,18 +30,23 @@
       </span>
     </section>
     <router-view></router-view>
+    <popup></popup>
   </div>
 </template>
 
 <script>
-  import Btn from '../btn.vue'
-
+  import {actions} from '../vuex/store' 
   export default{
+    vuex: {
+      actions: actions
+    },
+    components: {
+      popup:require('../components/popup'),
+      btn:require('../components/btn')
+    },
     data(){
       return{
         logSrc: 'https://cn.vuejs.org/images/logo.png',
-        btn1: '注册',
-        btn2: '登录',
         banSrc: 'http://htmljs.b0.upaiyun.com/uploads/1478698438615-65e11a061e85c4b9367a6477bb08a6ba.png',
         title: '热点话题',
         options:[
@@ -53,21 +58,24 @@
         isActive: true
       }
     },
-    components: { Btn},
     created: function(){
       this.isActive =  window.location.hash.indexOf('list')>0 ? false: true;
     },
     methods: {
-      selVal: function(e){
+      showPop: function(e){
         var item = e.target;
-        var val = item.value;
-      }
+        let value = [];
+        value.state = true;
+        value.title = item.innerHTML;
+        actions.showLogin(value);
+      },
+      enter: function(){}
     },
   }
 </script>
 
 <style scoped lang="sass">
-  @import '../../scss/btn.scss';
+  @import '../scss/btn.scss';
   .home{
     max-width: 1200px;
     margin: 0 auto;
