@@ -8,7 +8,6 @@ import VueRouter from 'vue-router/dist/vue-router.js'
 
 Vue.use(VueRouter);
 
-
 const router = new VueRouter({
     routes: [{
         path: '/panel',

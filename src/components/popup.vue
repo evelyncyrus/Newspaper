@@ -91,6 +91,7 @@ import {actions} from '../vuex/store.js'
   }
   .pop-hd{
     text-align: center;
+    margin-bottom: 1.5rem;
     h3{
       font-size: 1.5rem;
       line-height: 2rem;
@@ -101,42 +102,57 @@ import {actions} from '../vuex/store.js'
     position: relative;
     @include btnRadius($height:1.2rem,$wide:1.5rem);
     font-size: 1.5rem;
-    top: -1.5rem;
-    right: -1rem;
+    top: -1rem;
+    right: -3rem;
+    &:hover{
+      background: $warmColor;
+    }
   }
   .pop-panel{
     display: none;
     z-index: 2;
-    padding: 2rem;
+    padding: 1.5rem 4rem;
     border-radius: .3rem;
     @include pos;
-    width: 500px;
+    width: 420px;
     background: rgba($white,.9);
     input{
-      @include iptCss($height:2rem);
+      @include iptCss($height:2.5rem);
     }
   }
   .pop-item{
     width:100%;
-    margin-bottom: 1rem;
+    margin-bottom: .8rem;
   }
   .pop-code{
     @include pos($type:relative,$top:0,$left:0,$transform:none);
     .vcode{
       @include pos($type:absolute,$left:initial,$top:0,$transform:none);
       right: 0;
-      line-height: 1.8rem;
+      line-height: 2.4rem;
     }
   }
   .pop-sub{
-    margin-top: 2rem;
+    margin-top: 1.6rem;
     text-align: center;
+    .btn-theme{
+      padding: 0 3rem;
+    }
   }
   .show{
     display: block;
+    animation: show .5s;
   }
   .hide{
     display: none;
+  }
+  @keyframes show{
+    from {opacity: 0},
+    to {opacity:1}
+  }
+  @-webkit-keyframes show{
+    from {opacity: 0},
+    to {opacity:1}
   }
 }
 </style>

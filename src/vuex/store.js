@@ -24,7 +24,6 @@ export const getters = {
   popTitle: state => state.popTitle
 }
 
-// 整合初始状态和变更函数，我们就得到了我们所需的 store
 const store = new Vuex.Store({
   state,
   mutations,

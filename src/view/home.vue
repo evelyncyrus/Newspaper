@@ -29,7 +29,9 @@
         <router-link to="/list" active-class="active">列表</router-link>
       </span>
     </section>
-    <router-view></router-view>
+    <transition name="fade" mode="out-in">
+      <router-view></router-view>
+    </transition>
     <popup></popup>
   </div>
 </template>
@@ -176,4 +178,10 @@
       }
     }
   }
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .2s ease;
+}
+.fade-enter, .fade-leave-active {
+  opacity: 0
+}
 </style>

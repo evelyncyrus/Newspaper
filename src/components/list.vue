@@ -24,8 +24,7 @@
         lists:[
           {tag:'精品',title:'集合类操作优化经验总结',author:'作者',id:'1'},
           {tag:'',title:'集合类操作优化经验总结',author:'作者',id:'2'},
-          {tag:'', title:'集合类操作优化经验总结',author:'作者',id:'3'},
-          {tag:'',title:'集合类操作优化经验总结',author:'作者',id:'4'}
+          {tag:'', title:'集合类操作优化经验总结',author:'作者',id:'3'}
         ],
         star: true
       }
