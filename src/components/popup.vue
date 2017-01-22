@@ -6,8 +6,8 @@
       <span class="pop-close" @click="closePop">x</span>
     </div>
     <div class="pop-bd">
-      <div v-for="item in items" class="pop-item">
-        <input :type="item.type" :class="item.class" :placeholder="item.txt" v-on:input="updateValue($event.target)">
+      <div v-for="(item,index) in items" class="pop-item">
+        <input :type="item.type" :class="item.class" :placeholder="item.txt" v-on:blur="updateValue($event.target,index)"  required>
       </div>
       <div class="pop-code">
         <input type="text" class="code" :placeholder="code.txt">
@@ -29,13 +29,14 @@ import {actions} from '../vuex/store.js'
     },
     data(){
       return{
-        msg: "注 册",
+        msg: '',
         pClass: 'pop-panel',
         mClass: 'pop-mask',
         items: [
           {type:'text',class:'name',txt:'请输入手机号'},
           {type:'text',class:'password',txt:'请输入6位以上的英文或数字密码'},
-          {type:'text',class:'rekey',txt:'请确认密码'}
+          {type:'text',class:'rekey',txt:'请确认密码'},
+          {type:'email',class:'mail',txt:'电子邮箱'}
         ],
         code: {
           txt:'验证码',
@@ -63,13 +64,21 @@ import {actions} from '../vuex/store.js'
       },
       subInfo: function(){
       },
-      updateValue: function(item){
+      updateValue: function(item,index){
         var formattedVal = item.value.trim()
         //删除两边空格
-        if(formattedVal !== item.value&&formattedVal.length<11){
-          item.value = formattedVal;
-        }else{
-          item.value = formattedVal.slice(0,11);
+        if(index==0){
+          if(formattedVal !== item.value&&formattedVal.length<11){
+            item.value = formattedVal;
+          }else{
+            item.value = formattedVal.slice(0,11);
+          }
+        }else if(index==1){
+          if(formattedVal.length>6){
+            item.value = formattedVal;  
+          }else{
+            console.log('密码格式不对')
+          }
         }
         this.$emit('input',formattedVal)
       }
@@ -129,6 +138,7 @@ import {actions} from '../vuex/store.js'
     .vcode{
       @include pos($type:absolute,$left:initial,$top:0,$transform:none);
       right: 0;
+      height: 2.5rem;
       line-height: 2.4rem;
     }
   }
