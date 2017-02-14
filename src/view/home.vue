@@ -70,8 +70,7 @@
         value.state = true;
         value.title = item.innerHTML;
         actions.showLogin(value);
-      },
-      enter: function(){}
+      }
     },
   }
 </script>

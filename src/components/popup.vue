@@ -5,16 +5,16 @@
       <h3>{{msg}}</h3>
       <span class="pop-close" @click="closePop">x</span>
     </div>
-    <div class="pop-bd">
+    <form class="pop-bd" action="">
       <div v-for="(item,index) in items" class="pop-item">
-        <input :type="item.type" :class="item.class" :placeholder="item.txt" v-on:blur="updateValue($event.target,index)"  required>
+        <input :type="item.type" :class="item.class" :placeholder="item.txt" required>
       </div>
       <div class="pop-code">
-        <input type="text" class="code" :placeholder="code.txt">
+        <input type="text" class="code" :placeholder="code.txt" required>
         <img :src="code.src" :alt="code.alt" class="vcode" @click="changeImg">
       </div>
-      <div class="pop-sub"><button class="btn-theme" id="subBtn" @click="subInfo">{{confir}}</button></div>
-    </div>
+      <div class="pop-sub"><button type="submit" class="btn-theme" id="subBtn" @click="subInfo">{{confir}}</button></div>
+    </form>
   </div>
   <div :class="[mClass, {show:isShown}]"></div>
 </div>
@@ -34,7 +34,7 @@ import {actions} from '../vuex/store.js'
         mClass: 'pop-mask',
         items: [
           {type:'text',class:'name',txt:'请输入手机号'},
-          {type:'text',class:'password',txt:'请输入6位以上的英文或数字密码'},
+          {type:'password',class:'password',txt:'请输入6位以上的英文或数字密码'},
           {type:'text',class:'rekey',txt:'请确认密码'},
           {type:'email',class:'mail',txt:'电子邮箱'}
         ],
@@ -63,24 +63,29 @@ import {actions} from '../vuex/store.js'
         this.code.src = '';
       },
       subInfo: function(){
-      },
-      updateValue: function(item,index){
-        var formattedVal = item.value.trim()
-        //删除两边空格
-        if(index==0){
-          if(formattedVal !== item.value&&formattedVal.length<11){
-            item.value = formattedVal;
-          }else{
-            item.value = formattedVal.slice(0,11);
-          }
-        }else if(index==1){
-          if(formattedVal.length>6){
-            item.value = formattedVal;  
-          }else{
-            console.log('密码格式不对')
-          }
-        }
-        this.$emit('input',formattedVal)
+        // var formattedVal = item.value.trim();
+        // var key = true;
+        // //删除两边空格
+        // if(index==0){
+        //   if(formattedVal == item.value && formattedVal.length<=11){
+        //     item.value = formattedVal;
+        //   }else{
+        //     alert('格式不正确，请重新填写')
+        //     item.value = '';
+        //   }
+        // }else if(index==1){
+        //   if(formattedVal.length>6&&key==true){
+        //     item.value = formattedVal;  
+        //   }else{
+        //     key = false;
+        //   }
+        //   if(key == true){
+        //     alert('格式正确')
+        //   }else{
+            
+        //   }
+        // }
+        // this.$emit('input',formattedVal)
       }
     }
   }
